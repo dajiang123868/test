@@ -1,4 +1,15 @@
 #_*_coding:utf-8_*_
+
+"""
+使用orm比原生slq的好处
+1.代码的重复率高
+2.维护不方便
+3.sql注入，安全隐患
+性能损耗比较低，可以忽略不计
+"""
+
+
+
 """
 创建ORM模型
 ORM模型一般都是放在app的models.py文件中。
@@ -20,12 +31,14 @@ class Book(models.Model):
 
 映射模型到数据库中：
 将ORM模型映射到数据库中，总结起来就是以下几步：
-
 在settings.py中，配置好DATABASES，做好数据库相关的配置。
 在app中的models.py中定义好模型，这个模型必须继承自django.db.models。
 将这个app添加到settings.py的INSTALLED_APP中。
 在命令行终端，进入到项目所在的路径，然后执行命令python manage.py makemigrations来生成迁移脚本文件。
 同样在命令行中，执行命令python manage.py migrate来将迁移脚本文件映射到数据库中。
+
+
+
 """
 
 
